@@ -1,0 +1,14 @@
+*~
+\#*
+prism_api
+prism-api
+classes/
+*.class
+*.log
+cli-args/
+.vscode/
+.gradle/
+build/
+bin/main/
+
+
