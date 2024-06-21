@@ -1,0 +1,17 @@
+\begin{tikzpicture}[
+  state/.style={draw=black,inner sep=0, circle,minimum width=1cm},
+]
+  \foreach \x in {0,1,2} {
+    \node[state] at ($(2*\x,0)$) (s\x) {$s_\x$};
+  }
+  
+  \node[state] at ($(8,0)$) (sN) {$s_N$};
+
+  \node at ($(sN)!0.5!(s2)$) {$\cdots$};
+
+  \foreach \x/\y in {0/1,1/2} \draw[->] (s\x) -- (s\y);
+  \draw[->] (s2) -- ++(1,0);
+
+  \draw[<-] (sN) -- ++(-1,0);
+  
+\end{tikzpicture}
